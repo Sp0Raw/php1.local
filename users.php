@@ -5,5 +5,6 @@
  * Date: 26.06.2018
  * Time: 11:48
  */
+session_start();
 
 return ['admin'=> '13.05.1985'];

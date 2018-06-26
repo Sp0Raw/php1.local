@@ -5,6 +5,7 @@
  * Date: 26.06.2018
  * Time: 12:28
  */
+session_start();
 
 function getUsersList(){
     $hash=password_hash('admin',PASSWORD_DEFAULT);

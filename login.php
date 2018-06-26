@@ -5,6 +5,7 @@
  * Date: 26.06.2018
  * Time: 14:20
  */
+    session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,12 +27,13 @@
 
 </form>
 <?php
-$login=$_POST['login'] ?? null;
-echo $login;
-$password=$_POST['password'] ?? null;
-echo $password;
+    $login=$_POST['login'] ?? null;
+    echo $login;
+    $password=$_POST['password'] ?? null;
+    echo $password;
 
-echo $password; ///
+    echo $password; ///
+///
 ?>
 </body>
 </html>
