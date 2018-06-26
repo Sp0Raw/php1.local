@@ -31,7 +31,7 @@ echo $login;
 $password=$_POST['password'] ?? null;
 echo $password;
 
-
+echo $password; ///
 ?>
 </body>
 </html>
