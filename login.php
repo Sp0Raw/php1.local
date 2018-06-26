@@ -6,6 +6,7 @@
  * Time: 14:20
  */
     session_start();
+    include __DIR__ . '/security.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -31,8 +32,15 @@
     echo $login;
     $password=$_POST['password'] ?? null;
     echo $password;
+    if ($login!=null && $password!=null){
+        if (сheckPassword($login, $password)) {
+            echo 'Вы успешно авторизовались';
+        }else{
+            echo 'что то пошло не так';
+        }
+    }
 
-    echo $password; ///
+
 ///
 ?>
 </body>

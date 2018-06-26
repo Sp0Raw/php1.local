@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: dobrynin
  * Date: 26.06.2018
  * Time: 12:28
  */
-session_start();
+
 
 function getUsersList(){
     $hash=password_hash('admin',PASSWORD_DEFAULT);
@@ -32,9 +33,17 @@ function existsUser($login){
 
 function сheckPassword($login, $password){
     $arr=getUsersList();
+    var_dump(getUsersList());
+    if (password_verify($password,$arr[$login])) {
+       $_SESSION['username']= $login;
+       echo 'записываем юзер найм';
+       echo '$arr[$login]='.$arr[$login];
+        echo 'Читаем юзер найм';
+        echo '$_SESSION[\'username\']='.$_SESSION['username'];
+    }
     return password_verify($password,$arr[$login]);
 }
 
 function getCurrentUser(){
-
+    return $_SESSION['username'];
 }
