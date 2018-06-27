@@ -1,4 +1,9 @@
 <?php
+
+if (true) {
+    include(__DIR__.'/login.php');
+    exit();
+}
     session_start();
 //    setcookie('username','admin');
 //    setcookie('secret',sha1('13.05.1985'));
