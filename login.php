@@ -35,8 +35,12 @@
     if ($login!=null && $password!=null){
         if (сheckPassword($login, $password)) {
             echo 'Вы успешно авторизовались';
+            $arr=getUsersList();
+            $_SESSION[$arr[$login]]=true;
+            return true;
         }else{
             echo 'что то пошло не так';
+            return false;
         }
     }
 

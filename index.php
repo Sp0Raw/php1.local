@@ -1,8 +1,10 @@
 <?php
+session_start();
 
-if (true) {
-    include(__DIR__.'/login.php');
-    exit();
+if ($_SESSION['$2y$10$Bh75GDnUeNuLOVamZwgxM.O7cHNrIOJ0ZK1yu4K0DYwW.0sdS/mWa']==true) {
+//    include(__DIR__.'/login.php');
+    $i++;
+//    exit();
 }
     session_start();
 //    setcookie('username','admin');
