@@ -44,7 +44,7 @@ function сheckPassword($login, $password){
        echo 'Читаем юзер найм';
        echo '$_SESSION[\'username\']='.$_SESSION['username'];
        $_SESSION['login']=true;
-       exit;
+       //exit;
     }
     return password_verify($password,$arr[$login]);
 }
