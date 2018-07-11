@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
  * User: dobrynin
@@ -20,9 +21,9 @@
 <body>
 
 <form action="/login.php" method="post">
-    Имя пользователя: <input type="text" name="login">
+    Имя пользователя qwer qwer : <input type="text" name="login">
     <br>
-    Пароль: <input type="password" name="password">
+    Пароль qwer qwer : <input type="password" name="password">
     <br>
     <button type="submit">Войти</button>
 
@@ -37,6 +38,7 @@
             echo 'Вы успешно авторизовались';
             $arr=getUsersList();
             $_SESSION[$arr[$login]]=true;
+            $_SESSION['login']=true;
             return true;
         }else{
             echo 'что то пошло не так';
