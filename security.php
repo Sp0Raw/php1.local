@@ -46,7 +46,7 @@ function сheckPassword($login, $password){
        $_SESSION['login']=true;
        //exit;
     }
-    return password_verify($password,$arr[$login]);
+    return password_verify($password,($arr[$login] ?? null));
 }
 
 function getCurrentUser(){
