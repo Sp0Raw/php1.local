@@ -20,12 +20,12 @@ function getUsersList(){
 function existsUser($login){
     $res = 0;
     foreach (getUsersList() as $key => $value){
-        echo '<br> '.$key .'    '.$value;
+        //echo '<br> '.$key .'    '.$value;
         if ($key==$login){
             $res=1;
-            echo 'key= '.$key.'   value='.$value. '     ======= > '.$res;
-        }else{
-            echo 'key= '.$key.'   value='.$value;
+//            echo 'key= '.$key.'   value='.$value. '     ======= > '.$res;
+//        }else{
+//            echo 'key= '.$key.'   value='.$value;
         }
     }
     return $res;
@@ -34,15 +34,15 @@ function existsUser($login){
 /* проверяет пользователя и пароль */
 function сheckPassword($login, $password){
     $arr=getUsersList();
-    var_dump($arr[$login]);
-    var_dump(existsUser($login));
-    var_dump(password_verify($password,$arr[$login]));
+//    var_dump($arr[$login]);
+//    var_dump(existsUser($login));
+//    var_dump(password_verify($password,$arr[$login]));
     if (existsUser($login) && password_verify($password,$arr[$login])) {
        $_SESSION['username']= $login;
-       echo 'записываем юзер найм';
-       echo '$arr[$login]=' . $arr[$login];
-       echo 'Читаем юзер найм';
-       echo '$_SESSION[\'username\']='.$_SESSION['username'];
+//       echo 'записываем юзер найм';
+//       echo '$arr[$login]=' . $arr[$login];
+//       echo 'Читаем юзер найм';
+//       echo '$_SESSION[\'username\']='.$_SESSION['username'];
        $_SESSION['login']=true;
        //exit;
     }
